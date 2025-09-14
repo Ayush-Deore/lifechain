@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "projectName": "LifeChain",
+  "framework": "react",
+  "language": "ts",
+  "packageManager": "pnpm",
+  "src": {
+    "root": "client",
+    "pages": "client/pages",
+    "components": "client/components/ui",
+    "styles": "client/global.css"
+  },
+  "routing": {
+    "library": "react-router-dom",
+    "routes": [
+      { "path": "/", "file": "client/pages/OrganHome.tsx" },
+      {
+        "path": "/organ-donation/signup",
+        "file": "client/pages/OrganSignup.tsx"
+      },
+      {
+        "path": "/organ-donation/success",
+        "file": "client/pages/OrganSignupSuccess.tsx"
+      },
+      {
+        "path": "/recipient/signup",
+        "file": "client/pages/RecipientSignup.tsx"
+      },
+      {
+        "path": "/recipient/success",
+        "file": "client/pages/RegistrationSuccess.tsx"
+      },
+      {
+        "path": "/hospital-staff/signup",
+        "file": "client/pages/StaffSignup.tsx"
+      },
+      {
+        "path": "/hospital-staff/success",
+        "file": "client/pages/RegistrationSuccess.tsx"
+      },
+      { "path": "/organizations/signup", "file": "client/pages/OrgSignup.tsx" },
+      {
+        "path": "/organizations/success",
+        "file": "client/pages/RegistrationSuccess.tsx"
+      },
+      { "path": "/donor/home", "file": "client/pages/DonorHome.tsx" }
+    ]
+  },
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "client/global.css",
+    "darkMode": {
+      "strategy": "class",
+      "selector": ".dark"
+    },
+    "breakpoints": {
+      "sm": 640,
+      "md": 768,
+      "lg": 1024,
+      "xl": 1280,
+      "2xl": 1400
+    }
+  },
+  "themes": {
+    "default": {
+      "name": "Rose Dark",
+      "classes": ["dark", "theme-rose"],
+      "tokens": {
+        "colors": {
+          "background": "hsl(var(--background))",
+          "foreground": "hsl(var(--foreground))",
+          "primary": "hsl(var(--primary))",
+          "primary-foreground": "hsl(var(--primary-foreground))",
+          "secondary": "hsl(var(--secondary))",
+          "secondary-foreground": "hsl(var(--secondary-foreground))",
+          "accent": "hsl(var(--accent))",
+          "accent-foreground": "hsl(var(--accent-foreground))",
+          "muted": "hsl(var(--muted))",
+          "muted-foreground": "hsl(var(--muted-foreground))",
+          "border": "hsl(var(--border))",
+          "input": "hsl(var(--input))",
+          "ring": "hsl(var(--ring))",
+          "card": "hsl(var(--card))",
+          "card-foreground": "hsl(var(--card-foreground))"
+        },
+        "radius": {
+          "base": "var(--radius)",
+          "md": "calc(var(--radius) - 2px)",
+          "sm": "calc(var(--radius) - 4px)"
+        },
+        "font": {
+          "family": "Inter, ui-sans-serif, system-ui",
+          "sizeBase": "0.9rem"
+        }
+      }
+    }
+  },
+  "components": {
+    "Button": {
+      "file": "client/components/ui/button.tsx",
+      "export": "Button",
+      "props": {
+        "variant": [
+          "default",
+          "destructive",
+          "outline",
+          "secondary",
+          "ghost",
+          "link"
+        ],
+        "size": ["default", "sm", "lg", "icon"]
+      }
+    },
+    "Input": { "file": "client/components/ui/input.tsx", "export": "Input" },
+    "Textarea": {
+      "file": "client/components/ui/textarea.tsx",
+      "export": "Textarea"
+    },
+    "Select": {
+      "file": "client/components/ui/select.tsx",
+      "exports": [
+        "Select",
+        "SelectTrigger",
+        "SelectContent",
+        "SelectItem",
+        "SelectValue"
+      ]
+    },
+    "Checkbox": {
+      "file": "client/components/ui/checkbox.tsx",
+      "export": "Checkbox"
+    },
+    "Card": {
+      "file": "client/components/ui/card.tsx",
+      "exports": [
+        "Card",
+        "CardHeader",
+        "CardTitle",
+        "CardDescription",
+        "CardContent",
+        "CardFooter"
+      ]
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "examples": ["Heart", "ShieldCheck", "PhoneCall"]
+  },
+  "assets": {
+    "imageDomains": [
+      "cdn.builder.io",
+      "images.unsplash.com",
+      "images.pexels.com"
+    ]
+  },
+  "figma": {
+    "preferredUnits": "px",
+    "textScale": 0.9,
+    "colorMode": "dark",
+    "brand": "LifeChain"
+  }
+}
